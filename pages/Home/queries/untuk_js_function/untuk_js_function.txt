@@ -1,5 +1,5 @@
 SELECT 
-    p.id_peraturan, p.judul_peraturan, p.deskripsi, p.tanggal_diterbitkan,
+    p.id_peraturan, p.judul_peraturan, p.deskripsi, p.status, p.tanggal_diterbitkan,
     b.id_bab, b.nomor_bab, b.judul_bab, b.isi_bab,
     s.id_subbab, s.nomor_subbab, s.judul_subbab, s.isi_subbab,
     pj.id_penjelasan, pj.jenis_konten, pj.konten

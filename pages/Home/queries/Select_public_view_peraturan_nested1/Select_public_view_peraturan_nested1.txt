@@ -1,0 +1,8 @@
+SELECT
+  *
+FROM
+  public.view_peraturan_nested {{Table1.sortOrder.column ? "ORDER BY " + Table1.sortOrder.column + "  " + (Table1.sortOrder.order !== "desc" ? "" : "DESC") : ""}}
+LIMIT
+  {{Table1.pageSize}}
+OFFSET
+  {{Table1.pageOffset}}

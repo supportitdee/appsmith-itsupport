@@ -1,9 +1,21 @@
 export default {
   formatNestedData: async () => {
     try {
-      // Jalankan query jika input pencarian ada
-      if (cari_judul_baru.text.trim() === "") return ;
+      const input = cari_judul_baru.text.trim(); // Ambil input pencarian
+      const minLength = 4; // Minimal panjang karakter yang diizinkan
+      const validPattern = /^[a-zA-Z0-9\s]+$/; // Hanya huruf, angka, dan spasi yang diperbolehkan
 
+      // Cek panjang minimal
+      if (input.length < minLength) {
+        //showAlert("Masukkan minimal 3 karakter!", "warning");
+        return; // Tidak melanjutkan jika input tidak valid
+      }
+
+      // Cek apakah hanya satu huruf atau karakter tidak valid
+      if (!validPattern.test(input)) {
+        showAlert("Gunakan hanya huruf dan angka!", "error");
+        return; // Tidak melanjutkan jika input tidak valid
+      }
       await untuk_js_function.run();
       const data = untuk_js_function.data;
       const nestedResult = {};
@@ -16,6 +28,7 @@ export default {
             judul_peraturan: row.judul_peraturan,
             deskripsi: row.deskripsi || "-",
             tanggal_diterbitkan: row.tanggal_diterbitkan || "-",
+						status: row.status || "-",
             bab: {}
           };
         }
@@ -59,6 +72,8 @@ export default {
         markdown += `## ${peraturan.judul_peraturan}\n`;
         markdown += `*Deskripsi:* ${peraturan.deskripsi}\n`;
         markdown += `*Tanggal Diterbitkan:* ${peraturan.tanggal_diterbitkan}\n\n`;
+				//markdown += `Status Peraturan: ${peraturan.status}\n\n`;
+				markdown += `Status Peraturan: <span style="background-color: ${peraturan.status === 'active' ? 'green' : 'transparent'}; color: ${peraturan.status === 'active' ? 'white' : 'black'}; padding: 3px;">${peraturan.status}</span>\n\n`;
 
         Object.values(peraturan.bab).forEach((bab) => {
           markdown += `### Bab ${bab.nomor_bab}: ${bab.judul_bab}\n`;
