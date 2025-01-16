@@ -3,7 +3,7 @@ export default {
     try {
       // Cek apakah ada input pencarian sebelum menjalankan query
       if (!cari_judul_baru.text) {
-        return [];
+        return ;
       }
 
       // Jalankan query berdasarkan input pencarian

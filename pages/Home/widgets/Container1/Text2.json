@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 14,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -10,12 +10,12 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "jilb5xoiag",
-  "leftColumn": 23,
+  "leftColumn": 21,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -24,7 +24,7 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
+  "originalBottomRow": 14,
   "originalTopRow": 9,
   "overflow": "NONE",
   "parentColumnSpace": 12.75,
@@ -32,7 +32,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39,
+  "rightColumn": 44,
   "shouldTruncate": false,
   "text": "Cari Peraturan",
   "textAlign": "CENTER",

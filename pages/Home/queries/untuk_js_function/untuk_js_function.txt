@@ -7,5 +7,12 @@ FROM peraturan p
 LEFT JOIN bab b ON p.id_peraturan = b.id_peraturan
 LEFT JOIN subbab s ON b.id_bab = s.id_bab
 LEFT JOIN penjelasan pj ON s.id_subbab = pj.id_subbab
-WHERE p.judul_peraturan ILIKE '%' || {{cari_judul_baru.text}} || '%' 
+WHERE 
+    p.judul_peraturan ILIKE '%' || {{cari_judul_baru.text}} || '%' 
+    OR p.deskripsi ILIKE '%' || {{cari_judul_baru.text}} || '%'
+    OR b.judul_bab ILIKE '%' || {{cari_judul_baru.text}} || '%'
+    OR b.isi_bab ILIKE '%' || {{cari_judul_baru.text}} || '%'
+    OR s.judul_subbab ILIKE '%' || {{cari_judul_baru.text}} || '%'
+    OR s.isi_subbab ILIKE '%' || {{cari_judul_baru.text}} || '%'
+    OR pj.konten ILIKE '%' || {{cari_judul_baru.text}} || '%'
 ORDER BY p.id_peraturan, b.id_bab, s.id_subbab, pj.id_penjelasan;
