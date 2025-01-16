@@ -1,0 +1,43 @@
+-- Masukkan data ke tabel Peraturan dan ambil ID_Peraturan yang baru dimasukkan
+WITH inserted_peraturan AS (
+  INSERT INTO public."peraturan" (
+    "judul_peraturan", 
+    "deskripsi", 
+    "tanggal_diterbitkan"
+  ) 
+  VALUES (
+    '{{data_judul.text}}',
+    '{{data_deskripsi.text}}',
+    '{{data_tanggal.selectedDate}}'
+  ) 
+  RETURNING "id_peraturan"
+),
+-- Masukkan data ke tabel Bab dengan menggunakan ID_Peraturan yang baru
+inserted_bab AS (
+  INSERT INTO public."bab" (
+    "id_peraturan", 
+    "nomor_bab", 
+    "judul_bab", 
+    "isi_bab"
+  )
+  VALUES (
+    (SELECT "id_peraturan" FROM inserted_peraturan),  -- Ambil ID_Peraturan dari hasil INSERT
+    '{{no_bab.text}}',
+    '{{judul_bab.text}}',
+    '{{isi_bab.text}}'
+  )
+  RETURNING "id_bab"
+)
+-- Masukkan data ke tabel Subbab dengan menggunakan ID_Bab yang baru
+INSERT INTO public."subbab" (
+  "id_bab", 
+  "nomor_subbab", 
+  "judul_subbab", 
+  "isi_subbab"
+)
+VALUES (
+  (SELECT "id_bab" FROM inserted_bab),  -- Ambil ID_Bab dari hasil INSERT
+  '{{no_sub_bab.text}}',
+  '{{judul_sub_bab.text}}',
+  '{{isi_sub_bab.text}}'
+);

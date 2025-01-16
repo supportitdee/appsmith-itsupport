@@ -1,0 +1,27 @@
+SELECT 
+  p.id_peraturan, 
+  p.judul_peraturan, 
+  p.deskripsi AS deskripsi_peraturan,
+  p.tanggal_diterbitkan,
+  p.version AS version_peraturan,
+  p.status AS status_peraturan,
+  
+  b.id_bab, 
+  b.nomor_bab, 
+  b.judul_bab, 
+  b.isi_bab, 
+  
+  s.id_subbab, 
+  s.nomor_subbab, 
+  s.judul_subbab, 
+  s.isi_subbab,
+  
+  e.id_penjelasan,
+  e.jenis_konten,
+  e.konten AS konten_penjelasan
+  
+FROM peraturan p
+LEFT JOIN bab b ON p.id_peraturan = b.id_peraturan
+LEFT JOIN subbab s ON b.id_bab = s.id_bab
+LEFT JOIN penjelasan e ON s.id_subbab = e.id_subbab
+ORDER BY p.id_peraturan, b.nomor_bab, s.nomor_subbab;

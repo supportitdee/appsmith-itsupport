@@ -1,0 +1,1 @@
+SELECT "id_subab", "judul_subab" FROM public."subab";

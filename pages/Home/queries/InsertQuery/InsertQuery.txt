@@ -1,0 +1,28 @@
+INSERT INTO public."view_peraturan" (
+	"id_peraturan",
+	"judul_peraturan",
+	"deskripsi_peraturan",
+	"tanggal_diterbitkan",
+	"id_bab",
+	"nomor_bab",
+	"judul_bab",
+	"isi_bab",
+	"id_subbab",
+	"nomor_subbab",
+	"judul_subbab",
+	"isi_subbab"
+)
+VALUES (
+	'{{insert_form.formData.id_peraturan}}',
+	'{{insert_form.formData.judul_peraturan}}',
+	'{{insert_form.formData.deskripsi_peraturan}}',
+	'{{insert_form.formData.tanggal_diterbitkan}}',
+	'{{insert_form.formData.id_bab}}',
+	'{{insert_form.formData.nomor_bab}}',
+	'{{insert_form.formData.judul_bab}}',
+	'{{insert_form.formData.isi_bab}}',
+	'{{insert_form.formData.id_subbab}}',
+	'{{insert_form.formData.nomor_subbab}}',
+	'{{insert_form.formData.judul_subbab}}',
+	'{{insert_form.formData.isi_subbab}}'
+);

@@ -1,0 +1,4 @@
+SELECT "id_peraturan" AS "code", "judul_peraturan" AS "name"
+FROM public."peraturan"
+WHERE "judul_peraturan" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+ORDER BY "judul_peraturan";

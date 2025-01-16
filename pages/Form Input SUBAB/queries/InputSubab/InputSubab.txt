@@ -1,0 +1,16 @@
+INSERT INTO public."subbab" (
+    "id_bab", 
+    "nomor_subbab", 
+    "judul_subbab", 
+    "isi_subbab", 
+    "version", 
+    "status"
+  )
+  VALUES (
+    '{{cari_bab.selectedOptionValue}}',
+    '{{no_sub_bab.text}}',
+    '{{judul_sub_bab.text}}',
+    '{{isi_sub_bab.text}}',
+    1, 
+    'active'  
+  );

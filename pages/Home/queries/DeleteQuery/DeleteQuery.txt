@@ -1,0 +1,2 @@
+DELETE FROM public."view_peraturan"
+  WHERE "id_peraturan" = {{data_table.triggeredRow.id_peraturan}};

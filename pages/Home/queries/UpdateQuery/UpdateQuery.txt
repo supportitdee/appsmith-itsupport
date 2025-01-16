@@ -1,0 +1,13 @@
+UPDATE public."view_peraturan" SET
+		"judul_peraturan" = '{{update_form.fieldState.judul_peraturan.isVisible ? update_form.formData.judul_peraturan : update_form.sourceData.judul_peraturan}}',
+		"deskripsi_peraturan" = '{{update_form.fieldState.deskripsi_peraturan.isVisible ? update_form.formData.deskripsi_peraturan : update_form.sourceData.deskripsi_peraturan}}',
+    "tanggal_diterbitkan" = '{{update_form.fieldState.tanggal_diterbitkan.isVisible ? update_form.formData.tanggal_diterbitkan : update_form.sourceData.tanggal_diterbitkan}}',
+		"id_bab" = '{{update_form.fieldState.id_bab.isVisible ? update_form.formData.id_bab : update_form.sourceData.id_bab}}',
+		"nomor_bab" = '{{update_form.fieldState.nomor_bab.isVisible ? update_form.formData.nomor_bab : update_form.sourceData.nomor_bab}}',
+		"judul_bab" = '{{update_form.fieldState.judul_bab.isVisible ? update_form.formData.judul_bab : update_form.sourceData.judul_bab}}',
+		"isi_bab" = '{{update_form.fieldState.isi_bab.isVisible ? update_form.formData.isi_bab : update_form.sourceData.isi_bab}}',
+		"id_subbab" = '{{update_form.fieldState.id_subbab.isVisible ? update_form.formData.id_subbab : update_form.sourceData.id_subbab}}',
+		"nomor_subbab" = '{{update_form.fieldState.nomor_subbab.isVisible ? update_form.formData.nomor_subbab : update_form.sourceData.nomor_subbab}}',
+		"judul_subbab" = '{{update_form.fieldState.judul_subbab.isVisible ? update_form.formData.judul_subbab : update_form.sourceData.judul_subbab}}',
+		"isi_subbab" = '{{update_form.fieldState.isi_subbab.isVisible ? update_form.formData.isi_subbab : update_form.sourceData.isi_subbab}}'
+	WHERE "id_peraturan" = {{data_table.selectedRow.id_peraturan}};

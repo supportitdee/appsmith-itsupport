@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "67811a5458792a13d9b88165_39949fb0-aa32-4035-974d-4b571610ad86",
+  "id": "Form Input SUBAB_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Form Input SUBAB",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

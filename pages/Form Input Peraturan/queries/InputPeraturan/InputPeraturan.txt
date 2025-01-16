@@ -1,0 +1,14 @@
+INSERT INTO public."peraturan" (
+	"judul_peraturan", 
+	"deskripsi", 
+	"tanggal_diterbitkan", 
+  "version", 
+  "status"
+	)
+ VALUES (
+    '{{data_judul.text}}',
+    '{{deskripsi.text}}',
+    '{{data_tanggal.selectedDate}}',
+    1,  -- Default version
+    'active'  -- Default status
+  );

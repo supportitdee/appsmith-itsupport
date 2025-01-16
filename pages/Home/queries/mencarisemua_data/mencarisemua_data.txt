@@ -1,0 +1,20 @@
+SELECT "id_peraturan" AS "code", "judul_peraturan" AS "name"
+FROM public."peraturan"
+WHERE "judul_peraturan" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+   OR "deskripsi" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+   OR "status" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+UNION
+SELECT "id_bab" AS "code", "judul_bab" AS "name"
+FROM public."bab"
+WHERE "judul_bab" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+   OR "isi_bab" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+UNION
+SELECT "id_subbab" AS "code", "judul_subbab" AS "name"
+FROM public."subbab"
+WHERE "judul_subbab" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+   OR "isi_subbab" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+UNION
+SELECT "id_penjelasan" AS "code", "konten" AS "name"
+FROM public."penjelasan"
+WHERE "konten" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+ORDER BY "name";

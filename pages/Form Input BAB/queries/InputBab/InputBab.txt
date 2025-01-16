@@ -1,0 +1,16 @@
+INSERT INTO public."bab" (
+	  "id_peraturan", 
+    "nomor_bab", 
+    "judul_bab", 
+    "isi_bab", 
+    "version", 
+    "status"
+	)
+ VALUES (
+    '{{carijudul.selectedOptionValue}}', 
+    '{{no_bab.text}}',
+    '{{judul_bab.text}}',
+    '{{isi_bab.text}}',
+    1,
+    'active' 
+  );

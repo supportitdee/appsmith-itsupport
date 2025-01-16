@@ -1,0 +1,72 @@
+-- Masukkan data ke tabel Peraturan dan ambil ID_Peraturan yang baru dimasukkan
+WITH inserted_peraturan AS (
+  "INSERT INTO public."peraturan" ("
+    "judul_peraturan", 
+    "deskripsi", 
+    "tanggal_diterbitkan", 
+    "version", 
+    "status"
+  ) 
+  VALUES (
+    '{{value_judul_peraturan.text}}',
+    '{{value_deskripsi_peraturan.text}}',
+    '{{tanggal_peraturan_terbit.selectedDate}}',
+    1,  -- Default version
+    'active'  -- Default status
+  ) 
+  RETURNING "id_peraturan"
+),
+-- Masukkan data ke tabel Bab dengan menggunakan ID_Peraturan yang baru
+inserted_bab AS (
+  INSERT INTO public."bab" (
+    "id_peraturan", 
+    "nomor_bab", 
+    "judul_bab", 
+    "isi_bab", 
+    "version", 
+    "status"
+  )
+  VALUES (
+    (SELECT "id_peraturan" FROM inserted_peraturan),  -- Ambil ID_Peraturan dari hasil INSERT
+    '{{no_bab.text}}',
+    '{{judul_bab.text}}',
+    '{{isi_bab.text}}',
+    1,  -- Default version
+    'active'  -- Default status
+  )
+  RETURNING "id_bab"
+),
+-- Masukkan data ke tabel Subbab dengan menggunakan ID_Bab yang baru
+inserted_subbab AS (
+  INSERT INTO public."subbab" (
+    "id_bab", 
+    "nomor_subbab", 
+    "judul_subbab", 
+    "isi_subbab", 
+    "version", 
+    "status"
+  )
+  VALUES (
+    (SELECT "id_bab" FROM inserted_bab),  -- Ambil ID_Bab dari hasil INSERT
+    '{{no_sub_bab.text}}',
+    '{{judul_sub_bab.text}}',
+    '{{isi_sub_bab.text}}',
+    1,  -- Default version
+    'active'  -- Default status
+  )
+  RETURNING "id_subbab"
+)
+-- Masukkan data ke tabel Penjelasan dengan menggunakan ID_Subbab yang baru
+INSERT INTO public."penjelasan" (
+  "id_subbab", 
+  "jenis_konten", 
+  "konten"
+)
+VALUES (
+  (SELECT "id_subbab" FROM inserted_subbab),  -- Ambil ID_Subbab dari hasil INSERT
+  '{{jenis_konten.selectedOptionValue}}',     -- Ambil nilai yang dipilih dari Dropdown
+  CASE 
+    WHEN '{{jenis_konten.selectedOptionValue}}' = 'media' THEN '{{input_media.files}}'  -- Ambil file pertama jika media dipilih
+    ELSE '{{isi_konten.text}}'  -- Jika teks dipilih, masukkan konten teks
+  END
+);

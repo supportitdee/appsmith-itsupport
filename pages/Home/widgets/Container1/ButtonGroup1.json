@@ -1,0 +1,139 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem9ckmybks9s.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem74upyld0sl.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemsfrd8cgm4s.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem58jyopbdqq.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "iconName": "add",
+      "id": "groupButton2",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Add",
+      "menuItems": {
+        "menuItem58jyopbdqq": {
+          "id": "menuItem58jyopbdqq",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Penjelasan",
+          "onClick": "{{navigateTo('Form Input Penjelasan', {}, 'SAME_WINDOW');}}",
+          "widgetId": "wsk0q8swh5"
+        },
+        "menuItem74upyld0sl": {
+          "id": "menuItem74upyld0sl",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Bab",
+          "onClick": "{{navigateTo('Form Input BAB', {}, 'SAME_WINDOW');}}",
+          "widgetId": "aqbhi9tyg9"
+        },
+        "menuItem9ckmybks9s": {
+          "id": "menuItem9ckmybks9s",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Peraturan",
+          "onClick": "{{navigateTo('Form Input Peraturan', {}, 'SAME_WINDOW');}}",
+          "widgetId": "0t17ry9tos"
+        },
+        "menuItemsfrd8cgm4s": {
+          "id": "menuItemsfrd8cgm4s",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Subab",
+          "onClick": "{{navigateTo('Form Input SUBAB', {}, 'SAME_WINDOW');}}",
+          "widgetId": "11xjmpmg4m"
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "iconName": "user",
+      "id": "groupButton3",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Profil",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Keluar",
+          "onClick": "",
+          "widgetId": ""
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3go92nq67i",
+  "leftColumn": 41,
+  "minWidth": 450,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 12.40625,
+  "parentId": "ws8h5u70mn",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "fjcxrdpgzo",
+  "widgetName": "ButtonGroup1"
+}

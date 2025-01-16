@@ -1,0 +1,1 @@
+SELECT COUNT(*) from public.view_peraturan_full where judul_peraturan ilike '%{{Table1.searchText}}%';

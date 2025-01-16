@@ -1,0 +1,58 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0.375rem",
+  "bottomRow": 130,
+  "boxShadow": "none",
+  "defaultOptionValue": "Text",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "oyzmwi2k4q",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Jenis",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 128,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 121,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 123,
+  "originalTopRow": 116,
+  "parentColumnSpace": 12.341796875,
+  "parentId": "jnmdphdab3",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 21,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Text\",\n    \"code\": \"text\"\n  },\n  {\n    \"name\": \"Media\",\n    \"code\": \"media\"\n  }\n]",
+  "topRow": 123,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "g4k2fzfry0",
+  "widgetName": "jenis_konten"
+}

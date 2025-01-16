@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67811a5458792a13d9b88165_882eef85-55e6-417d-adce-41fc472ef6b6",
+  "id": "Home_menampilkan_daftar_peraturan",
+  "unpublishedCollection": {
+    "name": "menampilkan_daftar_peraturan",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

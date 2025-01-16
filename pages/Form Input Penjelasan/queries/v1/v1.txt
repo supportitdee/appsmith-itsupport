@@ -1,0 +1,2 @@
+INSERT INTO public."penjelasan" ("id_subbab", "jenis_konten", "konten")
+  VALUES (1, '', '');

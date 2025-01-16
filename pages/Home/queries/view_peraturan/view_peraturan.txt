@@ -1,0 +1,43 @@
+WITH subbab_aggregated AS (
+    SELECT 
+        s.ID_Bab,
+        STRING_AGG(
+            'Subbab ' || s.Nomor_Subbab || ': ' || s.Judul_Subbab || E'\n' ||
+            COALESCE(s.Isi_Subbab, '') || E'\n\n' ||
+            STRING_AGG(
+                CASE 
+                    WHEN pnj.Jenis_Konten = 'media' THEN '[Media] ' || pnj.Konten
+                    WHEN pnj.Jenis_Konten = 'text' THEN '[Text] ' || pnj.Konten
+                    ELSE '[Other] ' || pnj.Konten
+                END,
+                E'\n' -- Pemisah antar Penjelasan
+                ORDER BY pnj.ID_Penjelasan
+            ),
+            E'\n' -- Pemisah antar Subbab
+        ) AS subbab_dokumen
+    FROM view_peraturan_full s
+    LEFT JOIN view_peraturan_full pnj ON s.ID_Subbab = pnj.ID_Subbab
+    GROUP BY s.ID_Bab
+),
+bab_aggregated AS (
+    SELECT 
+        b.ID_Peraturan,
+        STRING_AGG(
+            'Bab ' || b.Nomor_Bab || ': ' || b.Judul_Bab || E'\n' ||
+            COALESCE(b.Isi_Bab, '') || E'\n\n' ||
+            subbab_aggregated.subbab_dokumen,
+            E'\n\n' -- Pemisah antar Bab
+            ORDER BY b.ID_Bab
+        ) AS bab_dokumen
+    FROM view_peraturan_full b
+    LEFT JOIN subbab_aggregated ON b.ID_Bab = subbab_aggregated.ID_Bab
+    GROUP BY b.ID_Peraturan
+)
+SELECT 
+    'Peraturan: ' || vp.Judul_Peraturan AS judul_peraturan,
+    'Deskripsi: ' || vp.Deskripsi_Peraturan AS deskripsi_peraturan,
+    'Tanggal Diterbitkan: ' || TO_CHAR(vp.Tanggal_Diterbitkan, 'DD Mon YYYY') AS tanggal_diterbitkan,
+    bab_aggregated.bab_dokumen AS konten_dokumen
+FROM view_peraturan_full vp
+LEFT JOIN bab_aggregated ON vp.ID_Peraturan = bab_aggregated.ID_Peraturan
+GROUP BY vp.ID_Peraturan, vp.Judul_Peraturan, vp.Deskripsi_Peraturan, vp.Tanggal_Diterbitkan, bab_aggregated.bab_dokumen;

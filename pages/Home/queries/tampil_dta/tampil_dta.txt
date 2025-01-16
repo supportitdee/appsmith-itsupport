@@ -1,0 +1,25 @@
+WITH nested_data AS (
+  SELECT
+    p."id_peraturan",
+    p."judul_peraturan",
+    b."id_bab",
+    b."judul_bab",
+    b."nomor_bab",
+    s."id_subbab",
+    s."judul_subbab",
+    s."nomor_subbab",
+    pj."id_penjelasan",
+    pj."konten"
+  FROM public."peraturan" p
+  LEFT JOIN public."bab" b ON b."id_peraturan" = p."id_peraturan"
+  LEFT JOIN public."subbab" s ON s."id_bab" = b."id_bab"
+  LEFT JOIN public."penjelasan" pj ON pj."id_subbab" = s."id_subbab"
+  WHERE 
+    p."judul_peraturan" ILIKE '%' || '{{cari_judul_baru.text isNaN(cari_judul_baru.text) || ""}}' || '%'
+    OR b."judul_bab" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+    OR s."judul_subbab" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+    OR pj."konten" ILIKE '%' || '{{cari_judul_baru.text || ""}}' || '%'
+)
+SELECT *
+FROM nested_data
+ORDER BY "judul_peraturan", "nomor_bab", "nomor_subbab";
