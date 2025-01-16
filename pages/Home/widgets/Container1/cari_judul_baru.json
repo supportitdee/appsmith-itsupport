@@ -43,7 +43,7 @@
   "mobileRightColumn": 23,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "onTextChanged": "{{view_peraturan_yang_dicari.formatNestedData()}}",
+  "onTextChanged": "{{view_peraturan_yang_dicari.formatNestedData();}}",
   "originalBottomRow": 51,
   "originalTopRow": 47,
   "parentColumnSpace": 12.40625,
