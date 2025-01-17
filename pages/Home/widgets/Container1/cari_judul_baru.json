@@ -14,7 +14,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [
     {
       "key": "onTextChanged"
@@ -45,7 +45,7 @@
   "needsErrorInfo": false,
   "onTextChanged": "{{view_peraturan_yang_dicari.formatNestedData();}}",
   "originalBottomRow": 51,
-  "originalTopRow": 47,
+  "originalTopRow": 43,
   "parentColumnSpace": 12.40625,
   "parentId": "ws8h5u70mn",
   "parentRowSpace": 10,
@@ -55,7 +55,7 @@
   "rightColumn": 63,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 47,
+  "topRow": 43,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "lwplvgt918",

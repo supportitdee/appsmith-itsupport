@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 47,
+  "bottomRow": 43,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -24,8 +24,8 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 47,
-  "originalTopRow": 42,
+  "originalBottomRow": 43,
+  "originalTopRow": 38,
   "overflow": "NONE",
   "parentColumnSpace": 12.75,
   "parentId": "ws8h5u70mn",
@@ -37,7 +37,7 @@
   "text": "Cari Peraturan",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 42,
+  "topRow": 38,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
