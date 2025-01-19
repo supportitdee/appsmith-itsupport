@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67811a5458792a13d9b88165_b360b08f-cebf-4a92-ba29-6fcb68e3d1b2",
-  "id": "Form Input SUBAB_SelectBab",
+  "gitSyncId": "67811a5458792a13d9b88165_3cd78ca9-b9af-4d12-9115-c0a235d9a948",
+  "id": "Form Input SUBAB_Select_judul",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"id_bab\", \"judul_bab\" FROM public.\"bab\";",
+      "body": "SELECT \"id_peraturan\", \"judul_peraturan\" FROM public.\"peraturan\";\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
-    "name": "SelectBab",
+    "executeOnLoad": true,
+    "name": "Select_judul",
     "pageId": "Form Input SUBAB",
     "userSetOnLoad": false
   }

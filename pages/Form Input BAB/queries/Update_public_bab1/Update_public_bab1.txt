@@ -1,0 +1,1 @@
+UPDATE public.bab SET "id_peraturan"= '{{Table1.updatedRow.id_peraturan}}', "nomor_bab"= '{{Table1.updatedRow.nomor_bab}}', "judul_bab"= '{{Table1.updatedRow.judul_bab}}', "isi_bab"= '{{Table1.updatedRow.isi_bab}}', "version"= '{{Table1.updatedRow.version}}', "status"= '{{Table1.updatedRow.status}}' WHERE "id_bab"= {{Table1.updatedRow.id_bab}};

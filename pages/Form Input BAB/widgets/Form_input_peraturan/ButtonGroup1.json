@@ -11,10 +11,10 @@
   },
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
+      "key": "groupButtons.groupButton3.buttonColor"
     },
     {
-      "key": "groupButtons.groupButton3.buttonColor"
+      "key": "borderRadius"
     }
   ],
   "dynamicTriggerPathList": [

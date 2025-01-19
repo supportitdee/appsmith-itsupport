@@ -1,0 +1,1 @@
+INSERT INTO public.bab ("id_peraturan","nomor_bab","judul_bab","isi_bab","version","status") VALUES ('{{(Table1.newRow || {}).id_peraturan}}','{{(Table1.newRow || {}).nomor_bab}}','{{(Table1.newRow || {}).judul_bab}}','{{(Table1.newRow || {}).isi_bab}}','{{(Table1.newRow || {}).version}}','{{(Table1.newRow || {}).status}}')

@@ -22,7 +22,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -31,7 +35,7 @@
   "key": "tqvp6xpvhj",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Label",
+  "labelText": "Judul Peraturan",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
@@ -43,20 +47,21 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "onOptionChange": "{{Select_Bab.run()}}",
+  "optionLabel": "judul_peraturan",
+  "optionValue": "id_peraturan",
   "parentColumnSpace": 12.341796875,
   "parentId": "jnmdphdab3",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 63,
   "serverSideFiltering": false,
-  "sourceData": "{{Select_subab.data}}",
+  "sourceData": "{{Select_Judul_Per.data}}",
   "topRow": 8,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "fjopzbod19",
-  "widgetName": "cari_subab"
+  "widgetName": "judul_per"
 }

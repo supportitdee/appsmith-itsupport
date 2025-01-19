@@ -1,4 +1,0 @@
-SELECT "id_subab" AS "code", "judul_subab" AS "name"
-FROM public."subab"
-WHERE "judul_subab" ILIKE '%' || '{{carijudul.filterText || ""}}' || '%'
-ORDER BY "judul_subab";

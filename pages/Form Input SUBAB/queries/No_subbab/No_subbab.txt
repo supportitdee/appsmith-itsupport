@@ -1,0 +1,3 @@
+SELECT COALESCE(MAX("nomor_subbab")::integer, 0) + 1 AS next_bab
+FROM public."subbab"
+WHERE "id_bab" = '{{cari_babCopy.selectedOptionValue}}';

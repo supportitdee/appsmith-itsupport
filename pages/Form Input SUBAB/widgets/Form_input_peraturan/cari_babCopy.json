@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 22,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -22,7 +22,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -43,6 +47,7 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
+  "onOptionChange": "{{No_subbab.run()}}",
   "optionLabel": "judul_bab",
   "optionValue": "id_bab",
   "originalBottomRow": 12,
@@ -55,10 +60,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "serverSideFiltering": false,
-  "sourceData": "{{SelectBab.data}}",
-  "topRow": 6,
+  "sourceData": "{{Select_Bab.data}}",
+  "topRow": 15,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "etuyyeq5qv",
-  "widgetName": "cari_bab"
+  "widgetId": "z18546wppf",
+  "widgetName": "cari_babCopy"
 }

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67811a5458792a13d9b88165_c7177578-a254-4d8b-a7af-12241ec9edc0",
-  "id": "Form Input Penjelasan_Select_subab",
+  "gitSyncId": "67811a5458792a13d9b88165_9d078bb6-7577-42b2-a65f-0c4d85775812",
+  "id": "Form Input BAB_No_Bab",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"id_subab\", \"judul_subab\" FROM public.\"subab\";\n",
+      "body": "SELECT COALESCE(MAX(\"nomor_bab\")::integer, 0) + 1 AS next_bab\nFROM public.\"bab\"\nWHERE \"id_peraturan\" = '{{carijudul.selectedOptionValue}}';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "db_peraturan_final",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
-    "name": "Select_subab",
-    "pageId": "Form Input Penjelasan",
+    "name": "No_Bab",
+    "pageId": "Form Input BAB",
     "userSetOnLoad": false
   }
 }

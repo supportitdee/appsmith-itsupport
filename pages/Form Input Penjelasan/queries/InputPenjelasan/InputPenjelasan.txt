@@ -4,10 +4,7 @@ INSERT INTO public."penjelasan" (
   "konten"
 )
 VALUES (
-  (SELECT "id_subbab" FROM inserted_subbab),  -- Ambil ID_Subbab dari hasil INSERT
-  '{{jenis_konten.selectedOptionValue}}',     -- Ambil nilai yang dipilih dari Dropdown
-  CASE 
-    WHEN '{{jenis_konten.selectedOptionValue}}' = 'media' THEN '{{input_media.files}}'  -- Ambil file pertama jika media dipilih
-    ELSE '{{isi_konten.text}}'  -- Jika teks dipilih, masukkan konten teks
-  END
+  '{{judul_sub.selectedOptionValue}}',    
+  '{{jenis_konten.selectedOptionValue}}',
+  '{{jenis_konten.selectedOptionValue == "media" ? input_media.files[0] : isi_konten.text}}'
 );

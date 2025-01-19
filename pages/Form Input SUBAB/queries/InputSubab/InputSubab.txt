@@ -7,7 +7,7 @@ INSERT INTO public."subbab" (
     "status"
   )
   VALUES (
-    '{{cari_bab.selectedOptionValue}}',
+    '{{cari_judul.selectedOptionValue}}',
     '{{no_sub_bab.text}}',
     '{{judul_sub_bab.text}}',
     '{{isi_sub_bab.text}}',

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67811a5458792a13d9b88165_5d9e673c-67cf-4bfe-96b4-deb2f51ab717",
-  "id": "Form Input Penjelasan_cari_idsubab",
+  "gitSyncId": "67811a5458792a13d9b88165_4d217b0b-e70c-4954-b848-d31c85ccc54b",
+  "id": "Form Input SUBAB_Select_Bab",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"id_subab\" AS \"code\", \"judul_subab\" AS \"name\"\nFROM public.\"subab\"\nWHERE \"judul_subab\" ILIKE '%' || '{{carijudul.filterText || \"\"}}' || '%'\nORDER BY \"judul_subab\";\n",
+      "body": "SELECT \n\t\t\"id_bab\",\n    \"nomor_bab\", \n    \"judul_bab\"\nFROM public.\"bab\"\nWHERE \"id_peraturan\" = '{{cari_judul.selectedOptionValue}}'\nORDER BY \"nomor_bab\" ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
-    "name": "cari_idsubab",
-    "pageId": "Form Input Penjelasan",
+    "executeOnLoad": true,
+    "name": "Select_Bab",
+    "pageId": "Form Input SUBAB",
     "userSetOnLoad": false
   }
 }

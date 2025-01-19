@@ -1,0 +1,3 @@
+SELECT COALESCE(MAX("nomor_bab")::integer, 0) + 1 AS next_bab
+FROM public."bab"
+WHERE "id_peraturan" = '{{carijudul.selectedOptionValue}}';

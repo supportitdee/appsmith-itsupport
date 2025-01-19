@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67811a5458792a13d9b88165_b360b08f-cebf-4a92-ba29-6fcb68e3d1b2",
-  "id": "Form Input SUBAB_SelectBab",
+  "gitSyncId": "67811a5458792a13d9b88165_e5bc9f63-2691-438e-bfd3-98b4c998039d",
+  "id": "Form Input BAB_Tampilkan_daftar_bab",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"id_bab\", \"judul_bab\" FROM public.\"bab\";",
+      "body": "SELECT \n    \"nomor_bab\", \n    \"judul_bab\"\nFROM public.\"bab\"\nWHERE \"id_peraturan\" = '{{carijudul.selectedOptionValue}}'\nORDER BY \"nomor_bab\" ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "db_peraturan_final",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": false,
-    "name": "SelectBab",
-    "pageId": "Form Input SUBAB",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": true,
+    "name": "Tampilkan_daftar_bab",
+    "pageId": "Form Input BAB",
     "userSetOnLoad": false
   }
 }

@@ -1,62 +1,62 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 31,
   "boxShadow": "none",
-  "defaultText": "{{carijudul.selectedOptionLabel}}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
-    {
-      "key": "defaultText"
-    },
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "inputType": "TEXT",
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "ncxxvvnlta",
-  "label": "",
+  "key": "tqvp6xpvhj",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelText": "Judul Subbab\n",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
-  "maxChars": "255",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 17,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 15,
-  "mobileTopRow": 10,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "originalBottomRow": 17,
-  "originalTopRow": 13,
+  "optionLabel": "judul_subbab",
+  "optionValue": "id_subbab",
   "parentColumnSpace": 12.341796875,
   "parentId": "jnmdphdab3",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 63,
-  "shouldAllowAutofill": false,
-  "showStepArrows": false,
-  "topRow": 13,
-  "type": "INPUT_WIDGET_V2",
-  "validation": "",
-  "version": 2,
-  "widgetId": "2hjd8lm4ro",
-  "widgetName": "value_judul_peraturan"
+  "serverSideFiltering": false,
+  "sourceData": "{{Select_Subbab.data}}",
+  "topRow": 24,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "76jcm9g2lr",
+  "widgetName": "judul_sub"
 }

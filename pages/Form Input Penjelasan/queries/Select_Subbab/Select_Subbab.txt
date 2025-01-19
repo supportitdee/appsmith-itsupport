@@ -1,0 +1,6 @@
+SELECT 
+		"id_subbab",
+    "judul_subbab"
+FROM public."subbab"
+WHERE "id_bab" = '{{Select1.selectedOptionValue}}'
+ORDER BY "nomor_subbab" ASC;

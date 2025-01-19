@@ -1,0 +1,7 @@
+SELECT 
+		"id_bab",
+    "nomor_bab", 
+    "judul_bab"
+FROM public."bab"
+WHERE "id_peraturan" = '{{cari_judul.selectedOptionValue}}'
+ORDER BY "nomor_bab" ASC;

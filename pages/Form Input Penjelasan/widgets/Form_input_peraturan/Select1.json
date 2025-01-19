@@ -1,62 +1,67 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 23,
   "boxShadow": "none",
-  "defaultText": "{{carijudul.selectedOptionLabel}}",
+  "defaultOptionValue": "GREEN",
   "dynamicBindingPathList": [
-    {
-      "key": "defaultText"
-    },
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "inputType": "TEXT",
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "ncxxvvnlta",
-  "label": "",
+  "key": "u9xwu6efe4",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelText": "Judul Bab",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
-  "maxChars": "255",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 17,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 15,
-  "mobileTopRow": 10,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "originalBottomRow": 17,
-  "originalTopRow": 13,
+  "onOptionChange": "{{Select_Subbab.run()}}",
+  "optionLabel": "judul_bab",
+  "optionValue": "id_bab",
   "parentColumnSpace": 12.341796875,
   "parentId": "jnmdphdab3",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 63,
-  "shouldAllowAutofill": false,
-  "showStepArrows": false,
-  "topRow": 13,
-  "type": "INPUT_WIDGET_V2",
-  "validation": "",
-  "version": 2,
-  "widgetId": "2hjd8lm4ro",
-  "widgetName": "value_judul_peraturan"
+  "serverSideFiltering": false,
+  "sourceData": "{{Select_Bab.data}}",
+  "topRow": 16,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "v04go0gry0",
+  "widgetName": "Select1"
 }

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"subbab\" (\n    \"id_bab\", \n    \"nomor_subbab\", \n    \"judul_subbab\", \n    \"isi_subbab\", \n    \"version\", \n    \"status\"\n  )\n  VALUES (\n    '{{cari_bab.selectedOptionValue}}',\n    '{{no_sub_bab.text}}',\n    '{{judul_sub_bab.text}}',\n    '{{isi_sub_bab.text}}',\n    1, \n    'active'  \n  );",
+      "body": "INSERT INTO public.\"subbab\" (\n    \"id_bab\", \n    \"nomor_subbab\", \n    \"judul_subbab\", \n    \"isi_subbab\", \n    \"version\", \n    \"status\"\n  )\n  VALUES (\n    '{{cari_judul.selectedOptionValue}}',\n    '{{no_sub_bab.text}}',\n    '{{judul_sub_bab.text}}',\n    '{{isi_sub_bab.text}}',\n    1, \n    'active'  \n  );",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

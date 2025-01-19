@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "67811a5458792a13d9b88165_f83744de-addc-4b24-9dfb-fc6e6c74b7c2",
-  "id": "Form Input Penjelasan_InputPenjelasan",
+  "gitSyncId": "67811a5458792a13d9b88165_f68d18f7-3e7b-418e-aa92-6c07910e421b",
+  "id": "Form Input BAB_Insert_public_bab1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"penjelasan\" (\n  \"id_subbab\", \n  \"jenis_konten\", \n  \"konten\"\n)\nVALUES (\n  '{{judul_sub.selectedOptionValue}}',    \n  '{{jenis_konten.selectedOptionValue}}',\n  '{{jenis_konten.selectedOptionValue == \"media\" ? input_media.files[0] : isi_konten.text}}'\n);\n",
+      "body": "INSERT INTO public.bab (\"id_peraturan\",\"nomor_bab\",\"judul_bab\",\"isi_bab\",\"version\",\"status\") VALUES ('{{(Table1.newRow || {}).id_peraturan}}','{{(Table1.newRow || {}).nomor_bab}}','{{(Table1.newRow || {}).judul_bab}}','{{(Table1.newRow || {}).isi_bab}}','{{(Table1.newRow || {}).version}}','{{(Table1.newRow || {}).status}}')",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -28,8 +28,8 @@
       }
     ],
     "executeOnLoad": false,
-    "name": "InputPenjelasan",
-    "pageId": "Form Input Penjelasan",
+    "name": "Insert_public_bab1",
+    "pageId": "Form Input BAB",
     "userSetOnLoad": false
   }
 }
